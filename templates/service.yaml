@@ -8,7 +8,7 @@ spec:
     project: beta
   ports:
     - protocol: TCP  
-      port: {{ .Values.servcie.servicePort }}
+      port: {{ .Values.service.servicePort }}
       targetPort: 80
       nodePort: 30007
   
