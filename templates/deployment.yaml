@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Deployment
+metadata: 
+  name: nginx
+  namespace: maxit
+  labels:
+    project: beta
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+        project: beta
+  template: 
+    metadata:
+      labels:
+        project: beta
+    spec:
+      containers:
+      - name: nginx
+        image: {{ .Values.deployment.imageVersion }}
+
+
+
+            
+
+      
+
